@@ -7,7 +7,7 @@ class Base{
         Base(){
             std::cout<<"Base con"<<std::endl;
         }
-        ~Base(){
+        virtual ~Base(){  // now base class destructor will also be called 
             std::cout<<"Base des"<<std::endl;
         }
         
