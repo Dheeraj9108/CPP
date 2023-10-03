@@ -1,9 +1,6 @@
 #include "Car.cpp"
 #include <vector>
 
-
-
-
 class Functionality{
 
 

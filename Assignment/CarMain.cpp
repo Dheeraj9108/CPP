@@ -2,6 +2,7 @@
 #include "functionality.cpp"
 #include <vector>
 
+
 std::ostream& operator<<(std::ostream& os, Car& obj){
 
     os << obj.carColor << " " << obj.carPrice << " " << std::endl;
