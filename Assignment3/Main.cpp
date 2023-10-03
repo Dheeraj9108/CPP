@@ -61,6 +61,7 @@ int main(){
     std::cout<<"Enter customer type: ";
     getline(std::cin,cType);
     std::cout<<"Average :- "<<find_Average_Of_Customer_Store_Credits(arr,cType)<<std::endl;
+    
 //----------------------------------------------------------------------------
     return 0;
 }
