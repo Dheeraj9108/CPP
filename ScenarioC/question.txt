@@ -1,0 +1,14 @@
+/*
+    We want to create objects of multiple classes (which are part of inheritence hirarchy)
+    We would like to store all objects INthe same container
+    All classes in the hirarchy have common functionality (Usually Declared In Parent Class)  
+*/
+
+...
+..
+...
+
+create a class bike with the following attributes
+    -bike milage which id float value.
+    -bike_type which is either COMMUTE,SPORTS,ATV
+//3 locations reserved; each location can store 8 bytes(address)
