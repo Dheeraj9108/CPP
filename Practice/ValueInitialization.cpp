@@ -18,4 +18,4 @@ int main() {
     std::cout<<e.x<<std::endl;
     std::cout<<e.y<<std::endl;
     return 0;
-}
+}   
