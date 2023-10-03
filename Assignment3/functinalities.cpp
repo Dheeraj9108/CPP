@@ -9,13 +9,18 @@ void CreateCustomer(Customer *customerContainer[3])
     customerContainer[2] = new Customer(3,"Don",CustomerType::PREMIUM,1000);
 }
 
-std::vector<Customer *> find_Customer_Based_On_Customer_Type(Customer *customerContainer[3], std::string cType)
+// [1] method
+//std::vector<Customer *> find_Customer_Based_On_Customer_Type(Customer *customerContainer[3], std::string cType)
+
+// [2] method
+Customer** find_Customer_Based_On_Customer_Type(Customer *customerContainer[3], std::string cType)
 {
     CustomerType customerType ;
     if(cType == "REGULAR") customerType = CustomerType::REGULAR;
     else if(cType == "PREMIUM") customerType = CustomerType::PREMIUM;
     else customerType = CustomerType::VIP;
 
+    // [1] method
     std::vector<Customer*> cusContainer;
     for(int i=0;i<3;i++){
         if(customerContainer[i]->customerType() == customerType){
@@ -23,19 +28,55 @@ std::vector<Customer *> find_Customer_Based_On_Customer_Type(Customer *customerC
         }
     }
 
-    return cusContainer;
+    //[2] method
+
+    static Customer* res[3];
+    int j = 0;
+    for(int i=0;i<3;i++){
+        if(customerContainer[i]->customerType() == customerType){
+            res[j++] = customerContainer[i];
+        }else{
+            res[j++] = nullptr;
+        }
+    }
+
+
+    return res;
+
+
+    //return cusContainer;
     
 }
 
-std::vector<Customer*> find_Customers_Based_On_Store_Credits(Customer *customerContainer[3])
+//[1] method
+//std::vector<Customer*> find_Customers_Based_On_Store_Credits(Customer *customerContainer[3])
+// [2]
+Customer** find_Customers_Based_On_Store_Credits(Customer *customerContainer[3])
 {
+
+    // [1] method
     std::vector<Customer*> cusContainer;
     for(int i=0;i<3;i++){
         if(customerContainer[i]->customerStoreCredit() >= 100 && customerContainer[i]->customerStoreCredit()<=200){
             cusContainer.push_back(customerContainer[i]);
         }
     }
-    return cusContainer;
+
+
+    // [2] method
+    static Customer* res[3];
+    int j = 0;
+    for(int i=0;i<3;i++){
+        if(customerContainer[i]->customerStoreCredit() >= 100 && customerContainer[i]->customerStoreCredit()<=200){
+            res[j++] = customerContainer[i];
+        }else{
+            res[j++] = nullptr;
+        }
+    }
+
+    return res;
+
+    //return cusContainer;
 }
 
 float find_Average_Of_Customer_Store_Credits(Customer *customerContainer[3], std::string cType)
