@@ -42,6 +42,7 @@ public:
     std::string brand() const { return _brand; }
 
     Type type() const { return _type; }
+    
 };
 
 #endif // VEHICLE_H
