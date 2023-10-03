@@ -16,3 +16,16 @@ float AveragePrice(Car* car[3]){
 
     return total;
 }
+
+void CallCalculateTax(Car *arr[3])
+{
+        for(int i=0;i<3;i++){
+            std::cout<< arr[i]->CalculateTax()<<std::endl;
+        }
+}
+
+void FreeMemory(Car* arr[3]){
+    for(int i=0;i<3;i++){
+        delete arr[i];
+    }
+}
