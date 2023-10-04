@@ -39,3 +39,4 @@ std::string DisplayEnum(const CarType value)
    return std::string();
 }
 
+
