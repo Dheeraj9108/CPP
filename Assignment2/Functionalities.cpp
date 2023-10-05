@@ -32,4 +32,3 @@ float AveragePrice(Vehicle* container[3])
 
     return total;
 }
-
