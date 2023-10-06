@@ -1,0 +1,34 @@
+create a class Emp with following attributes;
+    - _id which is a string
+    - _name which is a string  
+    - _salary which is a float
+    - _dept which is either DEVELOPMENT , TESTING or INTEGRATION
+    - _project ehich is s point to an instance of a project class
+
+Create a project with the following attributes
+    - _name which is string
+    - _duration which is an integer
+    - _ budget which is a float
+
+
+Functionalities
+    - function to create 3 objects in an array Als create three object of employee in a sperate array ; link one project to ne Employee.
+        --> Input : 2 array (onr for Employee) (second for project)
+        --> Output : void 
+
+    - funtion to return the pointer to the employee with highrst _salary
+        
+    - function to return count of all Employee in the array whose _dept value matches with the second parameter pased to this function.
+    - find the avg _budget for all the project.
+    - function to deallocate the heap 
+
+--------------------------------------------------------------------------
+
+// Composition and Aggregation rule
+
+ - Atleast Two entity should exist 
+ - one entity should use data member as second entity
+ - one entity should be independent and one should be dependent
+
+// in aggregation project can exits independently
+// in composition project is dependent on employee i.e., cannot exist without employee  PP

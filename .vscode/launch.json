@@ -9,7 +9,7 @@
             "name": "(gdb) Launch",
             "type": "cppdbg",
             "request": "launch",
-            "program": "/workspaces/CPP/Day4/a.out",
+            "program": "ScenarioE/Composition/a.out",
             "args": [],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",
